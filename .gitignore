@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+.venv/
+venv/
+
+# Runtime data and large local models
+data/*
+!data/.gitkeep
+models/*
+!models/.gitkeep
+tools/ffmpeg/bin/*
+!tools/ffmpeg/bin/.gitkeep
+logs/
+*.sqlite
+*.sqlite3
+*.db
+
+# Build artifacts
+build/
+dist/
+*.spec
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

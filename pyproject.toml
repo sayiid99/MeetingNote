@@ -1,0 +1,35 @@
+[project]
+name = "meeting-note"
+version = "0.1.0"
+description = "Windows 11 offline meeting transcription, translation, and summary workstation."
+readme = "README.md"
+requires-python = ">=3.11,<3.13"
+dependencies = [
+  "PySide6>=6.7",
+  "pydantic>=2.7",
+  "python-docx>=1.1",
+  "reportlab>=4.2",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.2",
+  "ruff>=0.5",
+]
+asr = [
+  "funasr>=1.2",
+]
+llm = [
+  "llama-cpp-python>=0.3.9",
+]
+
+[project.scripts]
+meeting-note = "meeting_note.__main__:main"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
